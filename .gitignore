@@ -4,3 +4,5 @@
 !.env.vault
 
 node_modules
+
+db.sqlite
