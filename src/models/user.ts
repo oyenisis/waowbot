@@ -20,6 +20,7 @@ export class User extends Model {
 
   public async getPoints(): Promise<number> {
     await this._verifyExistence();
-    return (await SqlDatabaseService.instance.get("SELECT points FROM users WHERE id = ?", this._id) as number);
+    const res = await SqlDatabaseService.instance.get("SELECT points FROM users WHERE id = ?", this._id) as [string: any];
+    return res["points"] as number;
   }
 }
