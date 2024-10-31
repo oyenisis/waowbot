@@ -1,4 +1,4 @@
-import { ClientEventHandler } from "./handlers/client-event-handler";
+import { ClientEventHandler } from "./events/client-event-handler";
 import { getEnvironmentVariable } from "./utils/environment";
 import { Client, Events, GatewayIntentBits } from "discord.js";
 
