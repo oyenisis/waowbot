@@ -6,13 +6,16 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "npx tsx src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "register": "npx tsx src/register-commands.ts",
+    "start-prod": "set NODE_ENV=production && npx tsx src/index.ts",
+    "register-prod": "set NODE_ENV=production && npx tsx src/register-commands.ts"
   },
   "author": "Ashley Lau [@oyenisis]",
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.13.0",
     "@types/eslint__js": "^8.42.3",
+    "discord-api-types": "^0.37.103",
     "dotenv-vault": "^1.26.2",
     "eslint": "^9.13.0",
     "tsx": "^4.19.2",
@@ -22,6 +25,7 @@
   "dependencies": {
     "discord.js": "^14.16.3",
     "dotenv": "^16.4.5",
+    "mysql2-async": "^2.0.1",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
   }

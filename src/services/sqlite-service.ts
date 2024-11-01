@@ -19,17 +19,12 @@ export class SqliteService extends SqlDatabaseService {
     });
   }
 
-  public async close(): Promise<void> {
-    await this._database?.close();
+  public async statement(statement: string): Promise<void> {
+    await this._database?.run(statement);
   }
 
-  public async statement(statement: string, ...params: unknown[]): Promise<void> {
-    await this._database?.run(statement, params);
-  }
-
-  public async get(statement: string, ...params: unknown[]): Promise<unknown> {
-    const res = await this._database?.get(statement, params);
-
+  public async get(statement: string): Promise<unknown> {
+    const res = await this._database?.get(statement);
     return res;
   }
 }
