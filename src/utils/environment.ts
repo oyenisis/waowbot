@@ -3,7 +3,7 @@ import * as dotenv from "dotenv";
 const env: string | undefined = process.env["NODE_ENV"];
 let file = ".env";
 
-if (env != undefined) {
+if (env == undefined) {
   file = ".env.production"
 }
 

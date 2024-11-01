@@ -1,19 +1,20 @@
-import { initClient } from "./client";
-import { Command } from "./commands/command";
-import { ClientEventHandler } from "./events/client-event-handler";
-import { User } from "./models/user";
-import { MySqlService } from "./services/mysql-service";
-import { SqlDatabaseService } from "./services/sql-database-service";
-import { SqliteService } from "./services/sqlite-service";
-import { getEnvironmentVariable } from "./utils/environment";
-import { setupDatabase } from "./utils/setup-database";
+import { initClient } from "./client.js";
+import { Command } from "./commands/command.js";
+import { ClientEventHandler } from "./events/client-event-handler.js";
+import { MySqlService } from "./services/mysql-service.js";
+import { SqlDatabaseService } from "./services/sql-database-service.js";
+import { SqliteService } from "./services/sqlite-service.js";
+import { getEnvironmentVariable } from "./utils/environment.js";
+import { setupDatabase } from "./utils/setup-database.js";
 import * as fs from "fs";
 
 let commands: {} = {};
 
 const files = fs.readdirSync("./src/commands");
-for (const file of files) {
-  if (file == "command.ts") continue;
+for (let file of files) {
+  if (file == "command.ts" || file == "command.js") continue;
+
+  file = file.replace(".ts", ".js");
 
   const command = await import(`./commands/${file}`);
   const obj = new command.default();

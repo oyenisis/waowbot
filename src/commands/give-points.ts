@@ -1,7 +1,7 @@
 import { ChatInputCommandInteraction } from "discord.js";
-import { Command, CommandOption, CommandOptionType } from "./command";
-import { User } from "../models/user";
-import { getEnvironmentVariable } from "../utils/environment";
+import { Command, CommandOption, CommandOptionType } from "./command.js";
+import { User } from "../models/user.js";
+import { getEnvironmentVariable } from "../utils/environment.js";
 
 export default class GivePoints extends Command {
   name: string = "givepoints";

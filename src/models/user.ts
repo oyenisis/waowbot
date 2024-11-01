@@ -1,5 +1,5 @@
-import { SqlDatabaseService } from "../services/sql-database-service";
-import { Model } from "./model";
+import { SqlDatabaseService } from "../services/sql-database-service.js";
+import { Model } from "./model.js";
 
 export class User extends Model {
   public id: string;

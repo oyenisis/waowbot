@@ -1,4 +1,4 @@
-import { SqlDatabaseService } from "./sql-database-service";
+import { SqlDatabaseService } from "./sql-database-service.js";
 import sqlite3 from "sqlite3";
 import { Database, open } from "sqlite";
 

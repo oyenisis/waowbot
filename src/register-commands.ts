@@ -1,7 +1,6 @@
 import * as fs from "fs";
-import { getEnvironmentVariable } from "./utils/environment";
-import { Command } from "./commands/command";
 import { REST, Routes } from "discord.js";
+import { getEnvironmentVariable } from "./utils/environment.js";
 
 let commands: object[] = [];
 

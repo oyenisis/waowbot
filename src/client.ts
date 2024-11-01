@@ -1,5 +1,5 @@
-import { ClientEventHandler } from "./events/client-event-handler";
-import { getEnvironmentVariable } from "./utils/environment";
+import { ClientEventHandler } from "./events/client-event-handler.js";
+import { getEnvironmentVariable } from "./utils/environment.js";
 import { Client, Events, GatewayIntentBits } from "discord.js";
 
 const DISCORD_TOKEN_ENV_KEY: string = "DISCORD_TOKEN";

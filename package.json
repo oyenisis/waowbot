@@ -5,10 +5,10 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
-    "start": "npx tsx src/index.ts",
-    "register": "npx tsx src/register-commands.ts",
-    "start-prod": "set NODE_ENV=production && npx tsx src/index.ts",
-    "register-prod": "set NODE_ENV=production && npx tsx src/register-commands.ts"
+    "start": "set NODE_ENV=development npx tsx src/index.ts",
+    "register": "set NODE_ENV=development npx tsx src/register-commands.ts",
+    "start-prod": "npx tsx src/index.ts",
+    "register-prod": "npx tsx src/register-commands.ts"
   },
   "author": "Ashley Lau [@oyenisis]",
   "license": "MIT",

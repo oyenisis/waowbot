@@ -9,9 +9,10 @@
     "isolatedModules": false,
     "strict": true,
     "noImplicitAny": false,
-    "inlineSourceMap": true
+    "inlineSourceMap": true,
+    "rootDir": "src"
   },
   "ts-node": {
     "esm": true
-  },
+  }
 }

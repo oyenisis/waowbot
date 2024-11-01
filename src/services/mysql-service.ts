@@ -1,4 +1,4 @@
-import { SqlDatabaseService } from "./sql-database-service";
+import { SqlDatabaseService } from "./sql-database-service.js";
 import Db from "mysql2-async";
 
 export class MySqlService extends SqlDatabaseService {
