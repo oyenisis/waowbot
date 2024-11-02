@@ -4,7 +4,7 @@ import { getEnvironmentVariable } from "./utils/environment.js";
 
 let commands: object[] = [];
 
-const files = fs.readdirSync("./src/commands");
+const files = fs.readdirSync(`${import.meta.dirname}/commands`);
 for (const file of files) {
   if (file == "command.ts") continue;
 

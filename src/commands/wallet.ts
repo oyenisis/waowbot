@@ -4,7 +4,7 @@ import { User } from "../models/user.js";
 import { getEnvironmentVariable } from "../utils/environment.js";
 
 export default class Wallet extends Command {
-  name: string = "wallet";
+  name: string = "balance";
   description: string = "Shows your point balance";
   options: CommandOption[] = [
     {
